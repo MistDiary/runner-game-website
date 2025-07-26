@@ -1,0 +1,117 @@
+
+    .game-page {
+      min-height: 100vh;
+      background: url('../img/game-bg.jpg') center/cover no-repeat fixed;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Courier New', monospace;
+    }
+
+    /* 半透明遮罩增强文字可读性 */
+    .game-page::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    /* 返回按钮 - 悬浮效果 */
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background: #ff6b00;
+      color: white;
+      border: 3px solid #000;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 0 #c05000;
+    }
+
+    .back-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 #c05000;
+    }
+
+    .back-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #c05000;
+    }
+
+    /* 游戏标题 */
+    .game-title {
+      text-align: center;
+      padding-top: 50px;
+      font-size: 3rem;
+      color: #ff6b00;
+      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000;
+      margin-bottom: 80px;
+    }
+
+    /* 游戏区域 */
+    .game-area {
+      width: 90%;
+      max-width: 800px;
+      height: 400px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.7);
+      border: 5px solid #ff6b00;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
+    }
+
+    /* 游戏提示文字 */
+    .game-instruction {
+      color: white;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.2rem;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    /* 动态装饰 - 移动的像素管道 */
+    .pipe {
+      position: absolute;
+      width: 60px;
+      background: #4CAF50;
+      border: 3px solid #000;
+      animation: movePipe 3s linear infinite;
+    }
+
+    .pipe.top {
+      top: 0;
+      height: 120px;
+    }
+
+    .pipe.bottom {
+      bottom: 0;
+      height: 150px;
+    }
+
+    @keyframes movePipe {
+      0% { transform: translateX(100vw); }
+      100% { transform: translateX(-100px); }
+    }
+
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .game-title {
+        font-size: 2rem;
+        padding-top: 30px;
+      }
+      .game-area {
+        height: 300px;
+      }
+      .game-instruction {
+        font-size: 1rem;
+      }
+    }

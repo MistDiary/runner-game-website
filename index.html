@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式基础配置 -->
+  <title>像素跑酷大冒险 - 官方网站</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 1. 导航栏 -->
+  <header class="navbar">
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#home">首页</a></li>
+        <li><a href="#play">玩法</a></li>
+        <li><a href="#rank">排行榜</a></li>
+        <li><a href="#download">下载</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 2. 英雄区 -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>像素跑酷大冒险</h1>
+      <p>挑战极限，突破高分！</p>
+      <button class="start-btn" onclick="window.location.href='loading.html'">开始游戏</button>
+    </div>
+  </section>
+
+  <!-- 3. 玩法说明 -->
+  <section class="play-guide" id="play">
+    <h2>游戏玩法</h2>
+    <div class="guide-steps">
+      <!-- 步骤1 -->
+      <div class="step">
+        <img src="img/step1.png" alt="滑动控制">
+        <p>倾斜手机控制角色左右移动</p>
+      </div>
+      <!-- 步骤2 -->
+      <div class="step">
+        <img src="img/step2.png" alt="跳跃闪避">
+        <p>点击跳跃躲避障碍物</p>
+      </div>
+      <!-- 步骤3 -->
+      <div class="step">
+        <img src="img/step3.png" alt="收集道具">
+        <p>收集金币解锁新皮肤</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 截图轮播 -->
+  <section class="screenshots">
+    <h2>游戏截图</h2>
+    <div class="screenshot-container">
+      <img src="img/img1.jpg" class="screenshot-img" alt="游戏截图1">
+      <button class="prev-btn">←</button>
+      <button class="next-btn">→</button>
+    </div>
+  </section>
+
+  <!-- 5. 排行榜 -->
+  <section class="rank-list" id="rank">
+    <h2>高分排行榜</h2>
+    <ul class="rank-items"></ul> <!-- 动态生成内容 -->
+  </section>
+  <!-- 下载-->
+   <section class ="download" id ="download">
+    <h2>下载最新版游戏体验</h2>
+    <div> 
+      <p> 点击这里下载体验我们的游戏</p>
+    </div>
+   </section>
+
+  <!-- 6. 页脚 -->
+  <footer>
+    <p>© 2024 像素跑酷大冒险 版权所有 | 联系方式：game@example.com</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

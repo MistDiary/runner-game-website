@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>像素跑酷 - 游戏界面</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/game.css">
+  
+</head>
+<body class="game-page">
+  <!-- 返回首页按钮 -->
+  <button class="back-button" id="backBtn">← 返回官网</button>
+
+  <!-- 游戏标题 -->
+  <h1 class="game-title">像素跑酷大冒险</h1>
+
+  <!-- 游戏主区域 -->
+  <div class="game-area">
+    <!-- 动态生成管道装饰 -->
+    <div class="pipe top" style="animation-delay: 0s;"></div>
+    <div class="pipe bottom" style="animation-delay: 1.5s;"></div>
+  </div>
+
+  <!-- 游戏操作提示 -->
+  <p class="game-instruction">按 ↑ 键跳跃 | 按 ↓ 键下蹲 | 躲避障碍物得分</p>
+  <script src="js/game.js"></script>
+  
+</body>
+</html>
